@@ -69,8 +69,9 @@ public class Fan {
     public String getColor(){
         return color;
     }
+    @Override
     public String toString() {
-        if(on == true){
+        if(on){
             return STR."\nFan speed: \{getSpeed()}, color: \{color}, radius: \{radius}\n";
         }
         else{

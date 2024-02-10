@@ -8,7 +8,7 @@ public class SubarrysWithKdisctint {
 //        int n = arr.length;
         int k = 2;
         int solution = getSubArray(arr, k) - getSubArray(arr, k - 1);
-        System.out.println(solution + " ");
+        System.out.println(STR."\{solution} ");
     }
 
     public static int getSubArray(int[] arr, int k) {

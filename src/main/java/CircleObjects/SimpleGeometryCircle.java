@@ -32,7 +32,12 @@ public class SimpleGeometryCircle {
         return radius;
     }
     public int setRadius(int newRadius){
-        return radius = newRadius;
+        if(newRadius >= 0){
+            return radius = newRadius;
+        }else {
+            throw new IllegalArgumentException("Argument cannot be less than zero");
+        }
+
     }
 
 

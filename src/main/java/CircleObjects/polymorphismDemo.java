@@ -14,6 +14,6 @@ public class polymorphismDemo {
     }
 
     public void displayObject( SimpleGeometryCircle object) {
-        System.out.println(STR."Created on \{object.setCreatedDate()}. color is \{object.getColor()}");
+        System.out.println(STR."Created on \{object.setCreatedDate()}. color is \{object.setColor("blue")}");
     }
 }

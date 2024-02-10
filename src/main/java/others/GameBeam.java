@@ -54,11 +54,7 @@ public class GameBeam {
     }
 
     static String getRandomPath() {
-        if ((int) (Math.random() * 2) == 0) {
-            return "R";
-        } else {
-            return "L";
-        }
+     return ((int) (Math.random() * 2) == 0 ? "R" : "L");
     }
 
     static void print(String[] list, int num) {

@@ -40,16 +40,16 @@ class Student{
 
     public void ComputeStudentGrades(){
         int[] temp = {'a', 'b', 'c', 'd'};
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for(int  i =0; i < numberOfStudents; i++){
-            int grades = temp[i];
+       HashMap<Integer, Integer> map = new HashMap<>();
+       for(int  i =0; i < numberOfStudents; i++) {
+           int grades = temp[i];
 
-            map.put((i), grades);
-        }
-        for(int studentIndex : map.keySet()){
-            char newGrades = (char)map.get(studentIndex).intValue();
-            System.out.println(STR."The student index at \{studentIndex}:\{newGrades}");
-        }
+           map.put(i, grades);
+       }
+       for(int studentIndex : map.keySet()){
+           int studentGrades = map.get(studentIndex).intValue();
+           System.out.println(STR."student grades of students: \{studentIndex} is : \{studentGrades}");
+       }
 
     }
     public void getTotalGrades(){
