@@ -11,11 +11,14 @@ String[] words = {"write", "that", ...};
 **/
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class newHangman {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(System.in);
         char[] wordCharacters =  getWord();
         char[] asterisks = new char[wordCharacters.length];
@@ -42,15 +45,32 @@ public class newHangman {
 
     sc.close();
     }
-    static char[] getWord() {
-        String[] words = {"new", "java", "springBoot", "methods", "furnishes"};
-        String random = words[(int) (Math.random() * words.length)];
-        char[] word = new char[words.length];
-        for(int i = 0; i < words.length; i++) {
-            word[i] = random.charAt(0);
+    static File openFile() {
+        File file = new File("hangman.txt");
+        if (!file.exists()) {
+            System.out.println(STR."file \{file.getName()}does not exist");
+            System.exit(1);
         }
-        return word;
+        return file;
     }
+    static char[] getWord() throws FileNotFoundException {
+     File file = openFile();
+        ArrayList<String> words = new ArrayList<>();
+
+     try(Scanner sc = new Scanner(file)){
+         while(sc.hasNext()){
+             words.add(sc.next());
+         }
+
+         // pick a random string
+         String pick = String.valueOf((int)(Math.random() * words.size()));
+
+         char[] word = pick.toCharArray();
+
+        return word;
+     }
+    }
+
 
     static void fillAsterisks(char[] blanks, char[] wordCharacters) {
         for(int i = 0; i < wordCharacters.length; i++) {
