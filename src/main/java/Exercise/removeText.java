@@ -100,7 +100,7 @@ class countWordsAddress {
                     count++;
                 }
             }
-            System.out.println("The number of words in president Abraham lincoln's gettysburg address is " + count);
+            System.out.println(STR."The number of words in president Abraham lincoln's gettysburg address is \{count}");
         } catch (java.net.MalformedURLException e) {
             System.out.println("Invalid URL");
         } catch (IOException e) {

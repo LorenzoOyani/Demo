@@ -1,6 +1,6 @@
-package CircleObjects;
+package Abstract_Interfaces;
 
-public class CircleFromSimpleGeometryCircle extends SimpleGeometryCircle {
+public class CircleFromSimpleGeometryCircle extends GeometricObjects {
     double radius;
 
 //    CircleFromSimpleGeometryCircle(){}
@@ -21,13 +21,9 @@ public class CircleFromSimpleGeometryCircle extends SimpleGeometryCircle {
     }
 
 @Override
-    public int getRadius() {
-        return (int) radius;
+    public double getRadius() {
+        return  radius;
     }
-
-//    public double setRadius(double radius) {
-//        return this.radius = radius;
-//    }
     public  double getArea(){
         return  radius * radius* Math.PI;
     }

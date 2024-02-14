@@ -50,3 +50,29 @@ public class isPrime {
 //        System.out.println("Area of a square with side length " + sideLength + " is: " + area);
 //    }
 //}
+
+class prime{
+    void main(){
+        int number =2;
+        int number_per_lines = 10;
+        int count = 0;
+        boolean isPrime = true;
+        for(int divisor = 2; divisor <= (int)(Math.sqrt(number)); divisor++){
+            if(number % divisor == 0){
+                isPrime = false;
+                break;
+            }
+            if(isPrime){
+                count++;
+                if(count % number_per_lines == 0){
+                    System.out.printf("%-7d", number);
+                }else{
+                    System.out.printf("%-7d", number);
+
+                }
+                number++;
+
+            }
+        }
+    }
+}
