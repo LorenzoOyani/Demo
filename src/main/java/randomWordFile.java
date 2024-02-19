@@ -13,7 +13,7 @@ public class randomWordFile {
         File file = new File("Exercise_15.txt");
         if (file.exists()) {
             System.out.println("File already exist");
-            System.exit(0);
+            System.exit(2);
         }
         try (PrintWriter output = new PrintWriter(file)) {
             for (int i = 0; i < 100; i++) {

@@ -9,21 +9,20 @@ public class InputMismatch  {
         Scanner sc = new Scanner(System.in);
 
         int input;
-        boolean continueInput = true;
+        boolean continueTyping = true;
         do{
             try{
-                System.out.print("Enter an integer: ");
+                System.out.println("Enter an integer: ");
                 input = sc.nextInt();
-                System.out.println("The number entered is "+ input);
-                continueInput = false;
+                System.out.println("The input is "+ input);
+                continueTyping = false;
 
-            }catch(InputMismatchException ex){
-                System.out.println(" try again, an integer is required: ");
+            }catch(InputMismatchException e){
+                System.out.println("input error: Enter an int");
                 sc.nextLine();
-
             }
+        }while(continueTyping);
 
-        }while(continueInput);
     }
 }
 

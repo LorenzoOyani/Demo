@@ -15,12 +15,22 @@ package Abstract_Interfaces;
  * All abstract class methods must all be implemented.
  * An abstract class can also be defined without abstract methods, the only trade-offs is that it can be used as a base class for other subclass
  * Abstract classes can be used as type.
+ *
+ * An interface is a class-like construct that contains only CONSTANT and abstract methods
+ * in many ways an interface is like an Abstract class in Java but interface is different in a way that it is used to specify common behaviour of objects
+ *
+ * comparable, edible, cloneable (all interfaces).
+ * an interface is treated like a special class in Java.
+ * Same as in Abstract classes, you cannot create from or instantiate an interface in Java, but can be used as type
+ *
+ * A strong is-a relationship between parent and child can be represented or modelled by a class
+ * A weak-is-a-relationship also known as a is-a-kind-relationship can be modelled using interfaces.
+ * A interface is treated like a special class in Java, the code is compiled into a separate byte code.
+ * and Yeah... OOP is fun, phew phew phew!!!.
   * */
 
 
-public class Interfaces {
-
-
-
-
+public interface Edible {
+    public abstract String howToEat();
 }
+
