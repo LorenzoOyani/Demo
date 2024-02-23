@@ -1,9 +1,6 @@
 package Exercise;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Scanner;
 
 /**
@@ -12,56 +9,39 @@ import java.util.Scanner;
  * of scores. Write a program that reads the scores from the file and displays their
  * total and average. Scores are separated by blanks.
  */
+
+
 public class processScores {
-    static void displayScores(String lines) throws FileNotFoundException {
-        String[] strings = lines.split("\\s+");
+
+    public static void displayScores(String line) {
+        String[] string = line.split("\\s+");
         int total = 0;
-        for (String score : strings) {
-            total += Integer.parseInt(score);
+        for (String s : string) {
+            total += s.length();
         }
-        double average = (double) total / strings.length;
-        System.out.println("Average: " + average);
-        System.out.println("Total: " + total);
+        double average = total / string.length;
+        System.out.println("The total scores is " + total);
+        System.out.println("The average score is " + average);
 
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        int currentIndex = 0;
+    public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: to read a scores from file");
+            System.out.println("usage: reading from a file");
             System.exit(1);
         }
-
         try {
-            java.net.URL url = new java.net.URL(args[0]);
+            java.net.URL url = new java.net.URL("http://cs.armstrong.edu/liang/data/Scores.txt");
             Scanner sc = new Scanner(url.openStream());
             while (sc.hasNext()) {
                 String line = sc.nextLine();
                 displayScores(line);
             }
-        } catch (MalformedURLException e) {
-            System.out.println("File: " + e.getMessage());
+
+        } catch (java.net.MalformedURLException e) {
+            System.out.println("form url cant be assessed");
         } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
-
-
-//        File file = new File("http://cs.armstrong.edu/liang/data/Scores.txt");
-//        if (!file.exists()) {
-//            System.out.println("file " + file.getName() + "does not exist");
-//            System.exit(1);
-//        }
-//
-//        try (Scanner sc = new Scanner(file)) {
-//            while (sc.hasNext()) {
-//                String line = sc.nextLine();
-//                currentIndex = line.indexOf("http", currentIndex);
-//                displayScores(line, currentIndex);
-//            }
-//
-//
-//        } catch (FileNotFoundException e) {
-//            System.out.println(e.getMessage());
-//        }
     }
 }

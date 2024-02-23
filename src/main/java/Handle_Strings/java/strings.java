@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class strings {
     public void main(String[] args) {
-        String s = "java";
-        s = "James";   // dereferencing
+        String s = "James";   // dereferencing
         System.out.println(s);
 
 

@@ -41,7 +41,7 @@ public class ArrayLists {
         newList.add("Superman");
         newList.add("Batman");
         newList.remove(2);
-        newList.contains("Tay"); // returns a boolean value;
+        newList.contains("Tay"); // returns a boolean value;pq
         newList.set(4, "Jackie");
         for (int i = 0; i < newList.size(); i++) {
             System.out.println(newList.get(i));

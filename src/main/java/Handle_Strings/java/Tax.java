@@ -106,7 +106,7 @@ public class Tax {
         if(rates.length >= 2) {
             for(int i = rates.length - 2; i >=0; i--) {
                 if(income > brackets[fillingStatus][0]){
-                    tax += (incomeTax = income - brackets[fillingStatus][0]) * rates[i + 1];
+                    tax += (incomeTax = income - (brackets[fillingStatus][0]) * rates[i + 1]);
                     income -=incomeTax;
                 }
 

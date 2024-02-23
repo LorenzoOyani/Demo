@@ -6,7 +6,7 @@ import java.util.Date;
  * Interface consist of abstract methods and constants.
  * You implement an interface.
  * */
-public class TestEdible {
+public class TestEdible implements Edible{
     void main() {
         Object[] objects = {new Tiger(), new Snake()};
         for (int i = 0; i < objects.length; i++) {
@@ -20,6 +20,11 @@ public class TestEdible {
                 System.out.println(((((Animal) objects[i]).MakeSound())));
             }
         }
+    }
+
+    @Override
+    public String howToEat() {
+        return null;
     }
 
     abstract class Animal {

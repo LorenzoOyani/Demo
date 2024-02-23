@@ -55,15 +55,14 @@ public class House implements java.lang.Cloneable, Comparable<House> {
 
 @Override
     public Object clone() {
-        try {
-            House houseClone = (House) super.clone();
-            houseClone.whenBuilt = (Date) whenBuilt.clone();
-            return houseClone;
-        } catch (CloneNotSupportedException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return null;
-    }
+       try{
+           House houseClone = (House) super.clone();
+           houseClone.whenBuilt = (Date)whenBuilt.clone();
+       }catch (CloneNotSupportedException ex){
+           System.out.println(ex.getMessage());
+       }
+    return null;
+}
 
     @Override
     public int compareTo(House o) {

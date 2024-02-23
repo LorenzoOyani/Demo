@@ -19,7 +19,7 @@ package Abstract_Interfaces;
  * An interface is a class-like construct that contains only CONSTANT and abstract methods
  * in many ways an interface is like an Abstract class in Java but interface is different in a way that it is used to specify common behaviour of objects
  *
- * comparable, edible, cloneable (all interfaces).
+ * comparable, cloneable (all interfaces).
  * an interface is treated like a special class in Java.
  * Same as in Abstract classes, you cannot create from or instantiate an interface in Java, but can be used as type
  *
